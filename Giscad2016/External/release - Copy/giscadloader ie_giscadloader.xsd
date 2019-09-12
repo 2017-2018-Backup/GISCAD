@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.integral.com.au/giscadloader" targetNamespace="http://www.integral.com.au/giscadloader" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:gml="http://www.opengis.net/gml" elementFormDefault="qualified" version="0.7">
+	<xs:import namespace="http://www.opengis.net/gml" schemaLocation="gml32exportprofile.xsd" />
+	<xs:element name="IEGISCADInterchange">
+		<xs:complexType>
+			<xs:choice>
+				<xs:element name="GISExport" type="GISExportType" />
+				<xs:element name="GISImport" type="GISImportType" />
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="GISExportType">
+		<xs:sequence>
+			<xs:element name="Header" type="ExportHeaderType" />
+			<xs:element name="ExportedFeatures" type="ExportFeaturesType" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GISImportType">
+		<xs:sequence>
+			<xs:element name="Header" type="ImportHeaderType" />
+			<xs:element name="ModifiedFeatures" type="ImportFeaturesType" />
+			<xs:element name="NewFeatures" type="ImportFeaturesType" />
+			<xs:element name="DeletedFeatures" type="DeletedFeaturesType" />
+		</xs:sequence>
+	</xs:complexType>
+	<!-- HEADER -->
+	<xs:complexType name="ExportHeaderType">
+		<xs:sequence>
+			<xs:element name="ExportID" type="xs:positiveInteger" />
+			<xs:element name="ProjectType" type="xs:string" />
+			<xs:element name="ProjectNumber" type="xs:string" />
+			<xs:element name="DrawingNumber" type="xs:string" />
+			<xs:element name="ProjectDescription" type="xs:string" />
+			<xs:element name="ExportDate" type="xs:dateTime" />
+			<xs:element name="ExportUserName" type="xs:string" />
+			<xs:element name="DesignerCompanyName" type="xs:string" />
+			<xs:element name="Comments" type="xs:string" minOccurs="0" />
+			<xs:element name="ExportCategories">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ExportCategory" type="xs:string" maxOccurs="unbounded" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ExportAreaOfInterest">
+				<xs:complexType>
+					<xs:choice>
+						<xs:sequence>
+							<xs:element name="FID" type="xs:positiveInteger" />
+							<xs:element name="FNO" type="xs:positiveInteger" />
+						</xs:sequence>
+						<xs:element ref="gml:Polygon" />
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ImportHeaderType">
+		<xs:complexContent>
+			<xs:extension base="ExportHeaderType">
+				<xs:sequence>
+					<xs:element name="ImportConversionDate" type="xs:dateTime" />
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<!-- FEATURE -->
+	<xs:complexType name="DeletedFeaturesType">
+		<xs:sequence>
+			<xs:element name="DeletedFeature" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="FID" type="xs:positiveInteger" />
+						<xs:element name="FNO" type="xs:positiveInteger" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ImportFeaturesType">
+		<xs:sequence>
+			<xs:element name="Feature" type="FeatureType" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ExportFeaturesType">
+		<xs:annotation>
+			<xs:documentation>The export feature includes State, Usage and Orientation to allow the feature to be placed on the relevant CAD layer.  Note, these attributes will also appear under the Attributes array element, however to simplify the CAD logic they have been replicated as optional named elements.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Feature" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:complexContent>
+						<xs:extension base="FeatureType">
+							<xs:sequence>
+								<xs:element name="State" type="xs:string" minOccurs="0" />
+								<xs:element name="Usage" type="xs:string" minOccurs="0" />
+								<xs:element name="Orientation" type="xs:string" minOccurs="0" />
+							</xs:sequence>
+						</xs:extension>
+					</xs:complexContent>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FeatureType">
+		<xs:annotation>
+			<xs:documentation>This defines GIS features which are identified by the unique integer FID.  The FID for exported existing features and imported modified features will be a unique positive integer.  The FID for imported new features will be a unique negative integer.  The FNO identifies the type of feature (e.g. FNO 126 is a conductor).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FID" type="xs:integer" />
+			<xs:element name="FNO" type="xs:positiveInteger" />
+			<xs:element name="Components" type="ComponentsType" />
+			<xs:element name="Attributes" type="AttributesType" />
+			<xs:element name="Relationships" type="RelationshipsType" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ComponentsType">
+		<xs:annotation>
+			<xs:documentation>This defines GIS feature geometry components which are identified by the identifier CNO (e,g, CNO 12604 is the conductor code label).  The CID element allows for repeating geometry components (e.g. CNO CID 12604 1 and 12604 2 represent two conductor code labels for the same feature).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Component" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CNO" type="xs:positiveInteger" />
+						<xs:element name="CID" type="xs:positiveInteger" />
+						<xs:element name="Geometry">
+							<xs:complexType>
+								<xs:choice>
+									<xs:sequence>
+										<xs:annotation>
+											<xs:documentation>The point feature includes one set of coordinates and an Orientation element in radians and an Alignment element with the following valid values - 0 = Center Middle, 1 = Center Left, 2 = Center Right, 4 = Top Middle, 5 = Top Left, 6 = Top Right, 8 = Lower Middle, 9 = Lower Left, 10 = Lower Right.</xs:documentation>
+										</xs:annotation>
+										<xs:element ref="gml:Point" />
+										<xs:element name="PointOrientation" type="xs:double" />
+										<xs:element name="PointAlignment">
+											<xs:simpleType>
+												<xs:restriction base="xs:integer">
+													<xs:pattern value="0|1|2|4|5|6|8|9|10|11" />
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+									<xs:element ref="gml:Polygon">
+										<xs:annotation>
+											<xs:documentation> The GIS polygon feature will include an exterior element made up of lines.  The GIS boundary feature will include an exterior element made up of lines and possibly arcs and may also include multiple interior elements (i.e. holes) made up of only lines.  Arcs will be represented by three points.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element ref="gml:CompositeSurface">
+										<xs:annotation>
+											<xs:documentation>The GIS composite polygon feature will include an exterior element made up of lines and possibly arcs.  Arcs will be represented by three points.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element ref="gml:CompositeCurve">
+										<xs:annotation>
+											<xs:documentation>The GIS composite linear feature will be made of lines and possibly arcs.  Arcs will be represented by three points.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element ref="gml:LineString">
+										<xs:annotation>
+											<xs:documentation>The GIS linear feature may be made of lines only.  Note, the GIS composite linear feature may also be represented by this element due to a GIS data issue.</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:choice>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AttributesType">
+		<xs:sequence>
+			<xs:element name="Attribute" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>This represents attributes associated with the GIS feature and each attribute is identified by the unique positive integer ANO.  The NAME element has been included to allow the attribute to be easily identified within the XML file.  The CID element allows for repeating data and is unique for the given ANO.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ANO" type="xs:positiveInteger" />
+						<xs:element name="Name" type="xs:string" />
+						<xs:element name="Data" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="CID" type="xs:positiveInteger" />
+									<xs:element name="Value" type="xs:string" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RelationshipsType">
+		<xs:sequence>
+			<xs:element name="Connectivity" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>GIS network features may be electrically connected to one or more other network features via one or two nodes.  For single node features (e.g. a bond point), connected features will be identified by the Node1FID array elements.  For two nodes features (e.g. a switch), connected features will be identified by the Node1FID and Node2FID array elements.  Note, the FIDs may be positive if connected to an existing GIS feature or negative if connected to a new feature.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Node1" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="FID" type="xs:integer" />
+									<xs:element name="FNO" type="xs:positiveInteger" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Node2" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="FID" type="xs:integer" />
+									<xs:element name="FNO" type="xs:positiveInteger" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Ownership" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>GIS features may be related to one parent feature (e.g. a pole mounted substation will have a pole as a parent) or a GIS feature may be related to many child features (e.g. a pole may have a substation and a switch as children).  Note, the FIDs may be positive if related to an existing GIS feature or negative if related to a new feature.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Parent" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="FID" type="xs:integer" />
+									<xs:element name="FNO" type="xs:positiveInteger" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="Child" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="FID" type="xs:integer" />
+									<xs:element name="FNO" type="xs:positiveInteger" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ManyOwnership" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>GIS features may be related to multiple features and in turn those feature may be related to other features (i.e. this is a many to many relationship) e.g. a conductor may be related to many poles and each pole may be related to many conductors.  Note, the FIDs may be positive if related to an existing GIS feature or negative if related to a new feature.</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Child" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="FID" type="xs:integer" />
+									<xs:element name="FNO" type="xs:positiveInteger" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>
