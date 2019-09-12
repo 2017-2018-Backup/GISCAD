@@ -1,0 +1,10 @@
+﻿C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project '..\..\RealDWGProcessor\RealDWGProcessor.vcxproj' does not exist.
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(1189,5): warning MSB8012: TargetPath(D:\Sundari\Giscad2016_source _from_anuj\External\Modules\GISCADConverter\.\Release\GISCADConverter.exe) does not match the Linker's OutputFile property value (D:\Sundari\Giscad2016_source _from_anuj\External\Release\GISCADConverter.exe). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     Creating library ..\..\Lib\GISCADConverter.lib and object ..\..\Lib\GISCADConverter.exp
+  Generating code
+d:\sundari\giscad2016_source _from_anuj\external\modules\giscadconverter\nsfeature.cpp(1094): warning C4715: 'CNSFeature::assignRepresentation': not all control paths return a value
+d:\sundari\giscad2016_source _from_anuj\external\modules\giscadconverter\nsfeature.cpp(1291): warning C4715: 'CNSFeature::getFinalBlockName': not all control paths return a value
+  All 3083 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  GISCADConverter.vcxproj -> D:\Sundari\Giscad2016_source _from_anuj\External\Modules\GISCADConverter\.\Release\GISCADConverter.exe
+  GISCADConverter.vcxproj -> D:\Sundari\Giscad2016_source _from_anuj\External\Modules\GISCADConverter\GISCADConverter.pdb (Full PDB)

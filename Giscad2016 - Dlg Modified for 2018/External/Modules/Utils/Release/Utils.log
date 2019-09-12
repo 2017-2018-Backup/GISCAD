@@ -1,0 +1,8 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(367,5): warning MSB8004: Intermediate Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Intermediate Directory.
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(368,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+     Creating library ..\..\Lib\Utils.lib and object ..\..\Lib\Utils.exp
+  Generating code
+  All 687 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Utils.vcxproj -> D:\Sundari\Giscad2016_source _from_anuj\External\Modules\Utils\..\..\Release\Utils.dll
+  Utils.vcxproj -> D:\Sundari\Giscad2016_source _from_anuj\External\Modules\Utils\Utils.pdb (Full PDB)
