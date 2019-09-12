@@ -1,0 +1,6 @@
+﻿C:\Program Files (x86)\MSBuild\14.0\bin\Microsoft.Common.CurrentVersion.targets(1611,5): warning : The referenced project '..\..\RealDWGProcessor\RealDWGProcessor.vcxproj' does not exist.
+  NSEllipseConnector.cpp
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(1189,5): warning MSB8012: TargetPath(D:\Sundari\Giscad2016_source _from_anuj\External\Modules\EllipseConnector\.\Release\EllipseConnector.dll) does not match the Linker's OutputFile property value (D:\Sundari\Giscad2016_source _from_anuj\External\Release\EllipseConnector.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
+     Creating library ..\..\Lib\EllipseConnector.lib and object ..\..\Lib\EllipseConnector.exp
+  EllipseConnector.vcxproj -> D:\Sundari\Giscad2016_source _from_anuj\External\Modules\EllipseConnector\.\Release\EllipseConnector.dll
+  EllipseConnector.vcxproj -> D:\Sundari\Giscad2016_source _from_anuj\External\Modules\EllipseConnector\EllipseConnector.pdb (Full PDB)

@@ -1,0 +1,1402 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.00.24215.1 (2eb75491).
+//
+// d:\sundari\giscad2016_source _from_anuj\external\modules\ellipseconnector\release\mssoap1.tlh
+//
+// C++ source equivalent of Win32 type library C:\Program Files (x86)\Common Files\MSSoap\Binaries\mssoap1.dll
+// compiler-generated file created 09/24/18 at 15:55:34 - DO NOT EDIT!
+
+//
+// Cross-referenced type libraries:
+//
+//
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace MSSOAPLib {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("c65657d9-5c4b-421e-8da6-ad4d590fe854"))
+/* LIBID */ __MSSOAPLib;
+struct __declspec(uuid("94873e03-77df-455f-bc1c-e83b5ab8cf0f"))
+/* interface */ IWSDLPort;
+struct __declspec(uuid("c4618005-691f-41fe-a318-c37cec14b867"))
+/* interface */ IEnumWSDLOperations;
+struct __declspec(uuid("2c713c3c-77fe-4997-aa30-38519c57fc15"))
+/* interface */ IWSDLOperation;
+struct __declspec(uuid("a8bf14b8-dbba-45b5-a1ed-571697facd4c"))
+/* interface */ IEnumSoapMappers;
+struct __declspec(uuid("ac2424f3-0a74-4231-ab31-4a037c9b22a3"))
+/* interface */ ISoapMapper;
+enum __MIDL___MIDL_itf_mssoap_0114_0001;
+struct __declspec(uuid("ade424f3-0474-4231-ab31-4a254897700b"))
+/* dual interface */ ISoapSerializer;
+enum __MIDL___MIDL_itf_mssoap_0114_0003;
+struct __declspec(uuid("fde424f3-0474-4231-ab31-4a037c9a98bb"))
+/* dual interface */ ISoapReader;
+struct __declspec(uuid("09bc1ff4-5711-4b93-b01d-ddd826ebd353"))
+/* dual interface */ ISoapConnector;
+struct __declspec(uuid("8905303d-7ed3-40c2-a37f-27a46f98346a"))
+/* dual interface */ ISoapConnectorFactory;
+struct /* coclass */ SoapConnector;
+struct /* coclass */ SoapConnectorFactory;
+struct /* coclass */ HttpConnector;
+struct /* coclass */ SoapReader;
+struct /* coclass */ SoapSerializer;
+struct __declspec(uuid("4bdfd94b-415c-46f2-95e1-d145ab080f9e"))
+/* dual interface */ ISOAPClient;
+struct __declspec(uuid("e8685095-8543-4771-b2ee-e17c58379e47"))
+/* dual interface */ ISOAPServer;
+struct /* coclass */ SoapServer;
+struct /* coclass */ SoapClient;
+enum __MIDL___MIDL_itf_mssoap_0114_0002;
+struct __declspec(uuid("b818238a-b709-4eb2-a4ce-6ba02c671f74"))
+/* dual interface */ ISoapTypeMapperFactory;
+struct __declspec(uuid("cea11d8a-258d-4863-a91f-3b4d046039e2"))
+/* dual interface */ ISoapTypeMapper;
+struct __declspec(uuid("504d4b91-76b8-4d88-95ea-ceb5e0fe41f3"))
+/* dual interface */ IHeaderHandler;
+struct __declspec(uuid("0571ce21-57ee-43d9-9ec7-36d7b4af5034"))
+/* dual interface */ ISoapTypeMapper2;
+struct __declspec(uuid("6deae1c2-789f-430c-94cb-703f24e25d52"))
+/* interface */ IEnumWSDLPorts;
+struct __declspec(uuid("c21a73b1-5655-4b36-ba3f-8e2dbabe82df"))
+/* interface */ IWSDLService;
+struct __declspec(uuid("bd5965b7-f5bf-49f3-ae7b-f817d4b7cc99"))
+/* interface */ IEnumWSDLService;
+struct __declspec(uuid("77127b0c-c47e-4861-8429-4b6da7401663"))
+/* interface */ IWSDLReader;
+struct /* coclass */ WSDLReader;
+struct /* coclass */ SoapTypeMapperFactory;
+struct /* coclass */ EnumWSDLService;
+struct /* coclass */ WSDLService;
+struct /* coclass */ EnumWSDLOperations;
+struct /* coclass */ WSDLOperation;
+struct /* coclass */ SoapMapper;
+struct /* coclass */ EnumSoapMappers;
+struct /* coclass */ EnumWSDLPorts;
+struct /* coclass */ WSDLPort;
+struct __declspec(uuid("edabbfa8-e126-402d-b65d-4efac1405f6e"))
+/* interface */ ISOAPError;
+typedef enum __MIDL___MIDL_itf_mssoap_0114_0001 smIsInputEnum;
+typedef enum __MIDL___MIDL_itf_mssoap_0114_0003 enEncodingStyle;
+typedef enum __MIDL___MIDL_itf_mssoap_0114_0002 enXSDType;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(ISoapSerializer, __uuidof(ISoapSerializer));
+_COM_SMARTPTR_TYPEDEF(ISoapMapper, __uuidof(ISoapMapper));
+_COM_SMARTPTR_TYPEDEF(IEnumSoapMappers, __uuidof(IEnumSoapMappers));
+_COM_SMARTPTR_TYPEDEF(ISoapReader, __uuidof(ISoapReader));
+_COM_SMARTPTR_TYPEDEF(IWSDLOperation, __uuidof(IWSDLOperation));
+_COM_SMARTPTR_TYPEDEF(IEnumWSDLOperations, __uuidof(IEnumWSDLOperations));
+_COM_SMARTPTR_TYPEDEF(IWSDLPort, __uuidof(IWSDLPort));
+_COM_SMARTPTR_TYPEDEF(ISoapConnector, __uuidof(ISoapConnector));
+_COM_SMARTPTR_TYPEDEF(ISoapConnectorFactory, __uuidof(ISoapConnectorFactory));
+_COM_SMARTPTR_TYPEDEF(ISOAPClient, __uuidof(ISOAPClient));
+_COM_SMARTPTR_TYPEDEF(ISOAPServer, __uuidof(ISOAPServer));
+_COM_SMARTPTR_TYPEDEF(IHeaderHandler, __uuidof(IHeaderHandler));
+_COM_SMARTPTR_TYPEDEF(IEnumWSDLPorts, __uuidof(IEnumWSDLPorts));
+_COM_SMARTPTR_TYPEDEF(IWSDLService, __uuidof(IWSDLService));
+_COM_SMARTPTR_TYPEDEF(IEnumWSDLService, __uuidof(IEnumWSDLService));
+_COM_SMARTPTR_TYPEDEF(IWSDLReader, __uuidof(IWSDLReader));
+_COM_SMARTPTR_TYPEDEF(ISOAPError, __uuidof(ISOAPError));
+_COM_SMARTPTR_TYPEDEF(ISoapTypeMapperFactory, __uuidof(ISoapTypeMapperFactory));
+_COM_SMARTPTR_TYPEDEF(ISoapTypeMapper, __uuidof(ISoapTypeMapper));
+_COM_SMARTPTR_TYPEDEF(ISoapTypeMapper2, __uuidof(ISoapTypeMapper2));
+
+//
+// Type library items
+//
+
+enum __MIDL___MIDL_itf_mssoap_0114_0001
+{
+    smInput = -1,
+    smOutput = 0,
+    smInOut = 1
+};
+
+struct __declspec(uuid("ade424f3-0474-4231-ab31-4a254897700b"))
+ISoapSerializer : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetEncodingStream))
+    IUnknownPtr EncodingStream;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Init (
+        const _variant_t & vDestination );
+    HRESULT startEnvelope (
+        _bstr_t env_Prefix,
+        _bstr_t enc_style_uri,
+        _bstr_t xml_encoding );
+    HRESULT endEnvelope ( );
+    HRESULT startHeader (
+        _bstr_t enc_style_uri );
+    HRESULT startHeaderElement (
+        _bstr_t name,
+        _bstr_t ns_uri,
+        int mustUnderstand,
+        _bstr_t actor_uri,
+        _bstr_t enc_style_uri,
+        _bstr_t prefix );
+    HRESULT endHeaderElement ( );
+    HRESULT endHeader ( );
+    HRESULT startBody (
+        _bstr_t enc_style_uri );
+    HRESULT endBody ( );
+    HRESULT startElement (
+        _bstr_t name,
+        _bstr_t ns_uri,
+        _bstr_t enc_style_uri,
+        _bstr_t prefix );
+    HRESULT endElement ( );
+    HRESULT SoapAttribute (
+        _bstr_t name,
+        _bstr_t ns_uri,
+        _bstr_t value,
+        _bstr_t prefix );
+    HRESULT SoapNamespace (
+        _bstr_t prefix,
+        _bstr_t ns_uri );
+    HRESULT SoapDefaultNamespace (
+        _bstr_t ns_uri );
+    HRESULT writeString (
+        _bstr_t string );
+    HRESULT writeBuffer (
+        long len,
+        unsigned char * buffer );
+    HRESULT startFault (
+        _bstr_t faultcode,
+        _bstr_t faultstring,
+        _bstr_t faultactor,
+        _bstr_t faultcodeNS );
+    HRESULT startFaultDetail (
+        _bstr_t enc_style_uri );
+    HRESULT endFaultDetail ( );
+    HRESULT endFault ( );
+    HRESULT reset ( );
+    HRESULT writeXML (
+        _bstr_t string );
+    _bstr_t getPrefixForNamespace (
+        _bstr_t ns_string );
+    IUnknownPtr GetEncodingStream ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Init (
+        /*[in]*/ VARIANT vDestination ) = 0;
+      virtual HRESULT __stdcall raw_startEnvelope (
+        /*[in]*/ BSTR env_Prefix,
+        /*[in]*/ BSTR enc_style_uri,
+        /*[in]*/ BSTR xml_encoding ) = 0;
+      virtual HRESULT __stdcall raw_endEnvelope ( ) = 0;
+      virtual HRESULT __stdcall raw_startHeader (
+        /*[in]*/ BSTR enc_style_uri ) = 0;
+      virtual HRESULT __stdcall raw_startHeaderElement (
+        /*[in]*/ BSTR name,
+        /*[in]*/ BSTR ns_uri,
+        /*[in]*/ int mustUnderstand,
+        /*[in]*/ BSTR actor_uri,
+        /*[in]*/ BSTR enc_style_uri,
+        /*[in]*/ BSTR prefix ) = 0;
+      virtual HRESULT __stdcall raw_endHeaderElement ( ) = 0;
+      virtual HRESULT __stdcall raw_endHeader ( ) = 0;
+      virtual HRESULT __stdcall raw_startBody (
+        /*[in]*/ BSTR enc_style_uri ) = 0;
+      virtual HRESULT __stdcall raw_endBody ( ) = 0;
+      virtual HRESULT __stdcall raw_startElement (
+        /*[in]*/ BSTR name,
+        /*[in]*/ BSTR ns_uri,
+        /*[in]*/ BSTR enc_style_uri,
+        /*[in]*/ BSTR prefix ) = 0;
+      virtual HRESULT __stdcall raw_endElement ( ) = 0;
+      virtual HRESULT __stdcall raw_SoapAttribute (
+        /*[in]*/ BSTR name,
+        /*[in]*/ BSTR ns_uri,
+        /*[in]*/ BSTR value,
+        /*[in]*/ BSTR prefix ) = 0;
+      virtual HRESULT __stdcall raw_SoapNamespace (
+        /*[in]*/ BSTR prefix,
+        /*[in]*/ BSTR ns_uri ) = 0;
+      virtual HRESULT __stdcall raw_SoapDefaultNamespace (
+        /*[in]*/ BSTR ns_uri ) = 0;
+      virtual HRESULT __stdcall raw_writeString (
+        /*[in]*/ BSTR string ) = 0;
+      virtual HRESULT __stdcall raw_writeBuffer (
+        /*[in]*/ long len,
+        /*[in]*/ unsigned char * buffer ) = 0;
+      virtual HRESULT __stdcall raw_startFault (
+        /*[in]*/ BSTR faultcode,
+        /*[in]*/ BSTR faultstring,
+        /*[in]*/ BSTR faultactor,
+        /*[in]*/ BSTR faultcodeNS ) = 0;
+      virtual HRESULT __stdcall raw_startFaultDetail (
+        /*[in]*/ BSTR enc_style_uri ) = 0;
+      virtual HRESULT __stdcall raw_endFaultDetail ( ) = 0;
+      virtual HRESULT __stdcall raw_endFault ( ) = 0;
+      virtual HRESULT __stdcall raw_reset ( ) = 0;
+      virtual HRESULT __stdcall raw_writeXML (
+        /*[in]*/ BSTR string ) = 0;
+      virtual HRESULT __stdcall raw_getPrefixForNamespace (
+        /*[in]*/ BSTR ns_string,
+        /*[out,retval]*/ BSTR * ns_prefix ) = 0;
+      virtual HRESULT __stdcall get_EncodingStream (
+        /*[out,retval]*/ IUnknown * * ppIEncodingStream ) = 0;
+};
+
+struct __declspec(uuid("ac2424f3-0a74-4231-ab31-4a037c9b22a3"))
+ISoapMapper : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetmessageName))
+    _bstr_t messageName;
+    __declspec(property(get=GetelementName))
+    _bstr_t elementName;
+    __declspec(property(get=GetpartName))
+    _bstr_t partName;
+    __declspec(property(get=GetelementType))
+    _bstr_t elementType;
+    __declspec(property(get=GetisInput))
+    smIsInputEnum isInput;
+    __declspec(property(get=Getencoding))
+    _bstr_t encoding;
+    __declspec(property(get=GetcomValue,put=PutcomValue))
+    _variant_t comValue;
+    __declspec(property(get=GetcallIndex))
+    long callIndex;
+    __declspec(property(get=GetparameterOrder))
+    long parameterOrder;
+    __declspec(property(get=GetxmlNameSpace))
+    _bstr_t xmlNameSpace;
+    __declspec(property(get=GetvariantType))
+    long variantType;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetmessageName ( );
+    _bstr_t GetelementName ( );
+    _bstr_t GetpartName ( );
+    _bstr_t GetelementType ( );
+    smIsInputEnum GetisInput ( );
+    _bstr_t Getencoding ( );
+    _variant_t GetcomValue ( );
+    void PutcomValue (
+        const _variant_t & pVarOut );
+    long GetcallIndex ( );
+    long GetparameterOrder ( );
+    _bstr_t GetxmlNameSpace ( );
+    long GetvariantType ( );
+    HRESULT Save (
+        struct ISoapSerializer * pISoapSerializer,
+        _bstr_t bstrEncoding,
+        enEncodingStyle enSaveStyle,
+        _bstr_t bstrMessageNamespace,
+        long lFlags );
+    HRESULT Load (
+        struct MSXML2::IXMLDOMNode * pNode,
+        _bstr_t bstrEncoding,
+        enEncodingStyle enStyle,
+        _bstr_t bstrMessageNamespace );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_messageName (
+        /*[out,retval]*/ BSTR * pbstrMessageName ) = 0;
+      virtual HRESULT __stdcall get_elementName (
+        /*[out,retval]*/ BSTR * pbstrElementName ) = 0;
+      virtual HRESULT __stdcall get_partName (
+        /*[out,retval]*/ BSTR * pbstrpartName ) = 0;
+      virtual HRESULT __stdcall get_elementType (
+        /*[out,retval]*/ BSTR * pbstrElementType ) = 0;
+      virtual HRESULT __stdcall get_isInput (
+        /*[out,retval]*/ smIsInputEnum * pbIsInput ) = 0;
+      virtual HRESULT __stdcall get_encoding (
+        /*[out,retval]*/ BSTR * pbstrEncodingStyle ) = 0;
+      virtual HRESULT __stdcall get_comValue (
+        /*[out,retval]*/ VARIANT * pVarOut ) = 0;
+      virtual HRESULT __stdcall put_comValue (
+        /*[in]*/ VARIANT pVarOut ) = 0;
+      virtual HRESULT __stdcall get_callIndex (
+        /*[out,retval]*/ long * plCallIndex ) = 0;
+      virtual HRESULT __stdcall get_parameterOrder (
+        /*[out,retval]*/ long * plparaOrder ) = 0;
+      virtual HRESULT __stdcall get_xmlNameSpace (
+        /*[out,retval]*/ BSTR * pbstrxmlNameSpace ) = 0;
+      virtual HRESULT __stdcall get_variantType (
+        /*[out,retval]*/ long * pvtType ) = 0;
+      virtual HRESULT __stdcall raw_Save (
+        /*[in]*/ struct ISoapSerializer * pISoapSerializer,
+        BSTR bstrEncoding,
+        enEncodingStyle enSaveStyle,
+        BSTR bstrMessageNamespace,
+        long lFlags ) = 0;
+      virtual HRESULT __stdcall raw_Load (
+        /*[in]*/ struct MSXML2::IXMLDOMNode * pNode,
+        BSTR bstrEncoding,
+        enEncodingStyle enStyle,
+        BSTR bstrMessageNamespace ) = 0;
+};
+
+struct __declspec(uuid("a8bf14b8-dbba-45b5-a1ed-571697facd4c"))
+IEnumSoapMappers : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Next (
+        long celt,
+        struct ISoapMapper * * ppSoapMapper,
+        long * pulFetched );
+    HRESULT Skip (
+        long celt );
+    HRESULT reset ( );
+    HRESULT Clone (
+        struct IEnumSoapMappers * * ppenum );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Next (
+        long celt,
+        /*[out]*/ struct ISoapMapper * * ppSoapMapper,
+        /*[out]*/ long * pulFetched ) = 0;
+      virtual HRESULT __stdcall raw_Skip (
+        long celt ) = 0;
+      virtual HRESULT __stdcall raw_reset ( ) = 0;
+      virtual HRESULT __stdcall raw_Clone (
+        /*[out]*/ struct IEnumSoapMappers * * ppenum ) = 0;
+};
+
+enum __MIDL___MIDL_itf_mssoap_0114_0003
+{
+    enDocumentLiteral = 0,
+    enDocumentEncoded = 1,
+    enRPCLiteral = 2,
+    enRPCEncoded = 4
+};
+
+struct __declspec(uuid("fde424f3-0474-4231-ab31-4a037c9a98bb"))
+ISoapReader : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetDOM))
+    MSXML2::IXMLDOMDocumentPtr DOM;
+    __declspec(property(get=GetEnvelope))
+    MSXML2::IXMLDOMElementPtr Envelope;
+    __declspec(property(get=GetBody))
+    MSXML2::IXMLDOMElementPtr Body;
+    __declspec(property(get=GetHeader))
+    MSXML2::IXMLDOMElementPtr Header;
+    __declspec(property(get=GetFault))
+    MSXML2::IXMLDOMElementPtr Fault;
+    __declspec(property(get=Getfaultstring))
+    MSXML2::IXMLDOMElementPtr faultstring;
+    __declspec(property(get=Getfaultcode))
+    MSXML2::IXMLDOMElementPtr faultcode;
+    __declspec(property(get=Getfaultactor))
+    MSXML2::IXMLDOMElementPtr faultactor;
+    __declspec(property(get=GetFaultDetail))
+    MSXML2::IXMLDOMElementPtr FaultDetail;
+    __declspec(property(get=GetHeaderEntry))
+    MSXML2::IXMLDOMElementPtr HeaderEntry[][];
+    __declspec(property(get=GetMustUnderstandHeaderEntries))
+    MSXML2::IXMLDOMNodeListPtr MustUnderstandHeaderEntries;
+    __declspec(property(get=GetHeaderEntries))
+    MSXML2::IXMLDOMNodeListPtr HeaderEntries;
+    __declspec(property(get=GetBodyEntries))
+    MSXML2::IXMLDOMNodeListPtr BodyEntries;
+    __declspec(property(get=GetBodyEntry))
+    MSXML2::IXMLDOMElementPtr BodyEntry[][];
+    __declspec(property(get=GetRPCStruct))
+    MSXML2::IXMLDOMElementPtr RPCStruct;
+    __declspec(property(get=GetRPCParameter))
+    MSXML2::IXMLDOMElementPtr RPCParameter[][];
+    __declspec(property(get=GetRPCResult))
+    MSXML2::IXMLDOMElementPtr RPCResult;
+    __declspec(property(get=GetsoapAction))
+    _bstr_t soapAction;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL Load (
+        const _variant_t & xmlSource,
+        _bstr_t bstrSoapAction );
+    VARIANT_BOOL loadXML (
+        _bstr_t bstrXML );
+    MSXML2::IXMLDOMDocumentPtr GetDOM ( );
+    MSXML2::IXMLDOMElementPtr GetEnvelope ( );
+    MSXML2::IXMLDOMElementPtr GetBody ( );
+    MSXML2::IXMLDOMElementPtr GetHeader ( );
+    MSXML2::IXMLDOMElementPtr GetFault ( );
+    MSXML2::IXMLDOMElementPtr Getfaultstring ( );
+    MSXML2::IXMLDOMElementPtr Getfaultcode ( );
+    MSXML2::IXMLDOMElementPtr Getfaultactor ( );
+    MSXML2::IXMLDOMElementPtr GetFaultDetail ( );
+    MSXML2::IXMLDOMElementPtr GetHeaderEntry (
+        _bstr_t LocalName,
+        _bstr_t NamespaceURI );
+    MSXML2::IXMLDOMNodeListPtr GetMustUnderstandHeaderEntries ( );
+    MSXML2::IXMLDOMNodeListPtr GetHeaderEntries ( );
+    MSXML2::IXMLDOMNodeListPtr GetBodyEntries ( );
+    MSXML2::IXMLDOMElementPtr GetBodyEntry (
+        _bstr_t LocalName,
+        _bstr_t NamespaceURI );
+    MSXML2::IXMLDOMElementPtr GetRPCStruct ( );
+    MSXML2::IXMLDOMElementPtr GetRPCParameter (
+        _bstr_t LocalName,
+        _bstr_t NamespaceURI );
+    MSXML2::IXMLDOMElementPtr GetRPCResult ( );
+    _bstr_t GetsoapAction ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Load (
+        /*[in]*/ VARIANT xmlSource,
+        /*[in]*/ BSTR bstrSoapAction,
+        /*[out,retval]*/ VARIANT_BOOL * isSuccessful ) = 0;
+      virtual HRESULT __stdcall raw_loadXML (
+        /*[in]*/ BSTR bstrXML,
+        /*[out,retval]*/ VARIANT_BOOL * isSuccessful ) = 0;
+      virtual HRESULT __stdcall get_DOM (
+        /*[out,retval]*/ struct MSXML2::IXMLDOMDocument * * pIXMLDOMDocument ) = 0;
+      virtual HRESULT __stdcall get_Envelope (
+        /*[out,retval]*/ struct MSXML2::IXMLDOMElement * * ppElement ) = 0;
+      virtual HRESULT __stdcall get_Body (
+        /*[out,retval]*/ struct MSXML2::IXMLDOMElement * * ppElement ) = 0;
+      virtual HRESULT __stdcall get_Header (
+        /*[out,retval]*/ struct MSXML2::IXMLDOMElement * * ppElement ) = 0;
+      virtual HRESULT __stdcall get_Fault (
+        /*[out,retval]*/ struct MSXML2::IXMLDOMElement * * ppElement ) = 0;
+      virtual HRESULT __stdcall get_faultstring (
+        /*[out,retval]*/ struct MSXML2::IXMLDOMElement * * ppElement ) = 0;
+      virtual HRESULT __stdcall get_faultcode (
+        /*[out,retval]*/ struct MSXML2::IXMLDOMElement * * ppElement ) = 0;
+      virtual HRESULT __stdcall get_faultactor (
+        /*[out,retval]*/ struct MSXML2::IXMLDOMElement * * ppElement ) = 0;
+      virtual HRESULT __stdcall get_FaultDetail (
+        /*[out,retval]*/ struct MSXML2::IXMLDOMElement * * ppElement ) = 0;
+      virtual HRESULT __stdcall get_HeaderEntry (
+        /*[in]*/ BSTR LocalName,
+        /*[in]*/ BSTR NamespaceURI,
+        /*[out,retval]*/ struct MSXML2::IXMLDOMElement * * ppElement ) = 0;
+      virtual HRESULT __stdcall get_MustUnderstandHeaderEntries (
+        /*[out,retval]*/ struct MSXML2::IXMLDOMNodeList * * ppNodeList ) = 0;
+      virtual HRESULT __stdcall get_HeaderEntries (
+        /*[out,retval]*/ struct MSXML2::IXMLDOMNodeList * * ppNodeList ) = 0;
+      virtual HRESULT __stdcall get_BodyEntries (
+        /*[out,retval]*/ struct MSXML2::IXMLDOMNodeList * * ppNodeList ) = 0;
+      virtual HRESULT __stdcall get_BodyEntry (
+        /*[in]*/ BSTR LocalName,
+        /*[in]*/ BSTR NamespaceURI,
+        /*[out,retval]*/ struct MSXML2::IXMLDOMElement * * ppElement ) = 0;
+      virtual HRESULT __stdcall get_RPCStruct (
+        /*[out,retval]*/ struct MSXML2::IXMLDOMElement * * ppElement ) = 0;
+      virtual HRESULT __stdcall get_RPCParameter (
+        /*[in]*/ BSTR LocalName,
+        /*[in]*/ BSTR NamespaceURI,
+        /*[out,retval]*/ struct MSXML2::IXMLDOMElement * * ppElement ) = 0;
+      virtual HRESULT __stdcall get_RPCResult (
+        /*[out,retval]*/ struct MSXML2::IXMLDOMElement * * ppElement ) = 0;
+      virtual HRESULT __stdcall get_soapAction (
+        /*[out,retval]*/ BSTR * pbstrSoapAction ) = 0;
+};
+
+struct __declspec(uuid("2c713c3c-77fe-4997-aa30-38519c57fc15"))
+IWSDLOperation : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=Getdocumentation))
+    _bstr_t documentation;
+    __declspec(property(get=Getname))
+    _bstr_t name;
+    __declspec(property(get=GetsoapAction))
+    _bstr_t soapAction;
+    __declspec(property(get=GetobjectProgID))
+    _bstr_t objectProgID;
+    __declspec(property(get=GetobjectMethod))
+    _bstr_t objectMethod;
+    __declspec(property(get=GethasHeader))
+    VARIANT_BOOL hasHeader;
+    __declspec(property(get=Getstyle))
+    _bstr_t style;
+    __declspec(property(get=GetpreferredEncoding))
+    _bstr_t preferredEncoding;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t Getdocumentation ( );
+    _bstr_t Getname ( );
+    _bstr_t GetsoapAction ( );
+    _bstr_t GetobjectProgID ( );
+    _bstr_t GetobjectMethod ( );
+    VARIANT_BOOL GethasHeader ( );
+    _bstr_t Getstyle ( );
+    _bstr_t GetpreferredEncoding ( );
+    HRESULT GetOperationParts (
+        struct IEnumSoapMappers * * ppIEnumSoapMappers );
+    HRESULT ExecuteOperation (
+        struct ISoapReader * pISoapReader,
+        struct ISoapSerializer * pISoapSerializer );
+    HRESULT Save (
+        struct ISoapSerializer * pISoapSerializer,
+        VARIANT_BOOL vbInput );
+    HRESULT SaveHeaders (
+        struct ISoapSerializer * pISoapSerializer,
+        VARIANT_BOOL vbOutput );
+    HRESULT Load (
+        struct ISoapReader * pISoapReader,
+        VARIANT_BOOL vbInput );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_documentation (
+        /*[out,retval]*/ BSTR * bstrDocumentation ) = 0;
+      virtual HRESULT __stdcall get_name (
+        /*[out,retval]*/ BSTR * pbstrOperationName ) = 0;
+      virtual HRESULT __stdcall get_soapAction (
+        /*[out,retval]*/ BSTR * pbstrSoapAction ) = 0;
+      virtual HRESULT __stdcall get_objectProgID (
+        /*[out,retval]*/ BSTR * pbstrobjectProgID ) = 0;
+      virtual HRESULT __stdcall get_objectMethod (
+        /*[out,retval]*/ BSTR * pbstrobjectMethod ) = 0;
+      virtual HRESULT __stdcall get_hasHeader (
+        /*[out,retval]*/ VARIANT_BOOL * pbHeader ) = 0;
+      virtual HRESULT __stdcall get_style (
+        /*[out,retval]*/ BSTR * pbstrstyle ) = 0;
+      virtual HRESULT __stdcall get_preferredEncoding (
+        /*[out,retval]*/ BSTR * pbstrpreferredEncoding ) = 0;
+      virtual HRESULT __stdcall raw_GetOperationParts (
+        /*[out]*/ struct IEnumSoapMappers * * ppIEnumSoapMappers ) = 0;
+      virtual HRESULT __stdcall raw_ExecuteOperation (
+        /*[in]*/ struct ISoapReader * pISoapReader,
+        /*[in]*/ struct ISoapSerializer * pISoapSerializer ) = 0;
+      virtual HRESULT __stdcall raw_Save (
+        /*[in]*/ struct ISoapSerializer * pISoapSerializer,
+        VARIANT_BOOL vbInput ) = 0;
+      virtual HRESULT __stdcall raw_SaveHeaders (
+        /*[in]*/ struct ISoapSerializer * pISoapSerializer,
+        VARIANT_BOOL vbOutput ) = 0;
+      virtual HRESULT __stdcall raw_Load (
+        /*[in]*/ struct ISoapReader * pISoapReader,
+        VARIANT_BOOL vbInput ) = 0;
+      virtual unsigned short * __stdcall getNameRef ( ) = 0;
+};
+
+struct __declspec(uuid("c4618005-691f-41fe-a318-c37cec14b867"))
+IEnumWSDLOperations : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Next (
+        long celt,
+        struct IWSDLOperation * * ppWSDLOperation,
+        long * pulFetched );
+    HRESULT Skip (
+        long celt );
+    HRESULT reset ( );
+    HRESULT Clone (
+        struct IEnumWSDLOperations * * ppenum );
+    HRESULT Find (
+        _bstr_t bstrOperationToFind,
+        struct IWSDLOperation * * ppIWSDLOperation );
+    HRESULT Size (
+        long * pSize );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Next (
+        long celt,
+        /*[out]*/ struct IWSDLOperation * * ppWSDLOperation,
+        /*[out]*/ long * pulFetched ) = 0;
+      virtual HRESULT __stdcall raw_Skip (
+        long celt ) = 0;
+      virtual HRESULT __stdcall raw_reset ( ) = 0;
+      virtual HRESULT __stdcall raw_Clone (
+        /*[out]*/ struct IEnumWSDLOperations * * ppenum ) = 0;
+      virtual HRESULT __stdcall raw_Find (
+        BSTR bstrOperationToFind,
+        /*[out]*/ struct IWSDLOperation * * ppIWSDLOperation ) = 0;
+      virtual HRESULT __stdcall raw_Size (
+        /*[out]*/ long * pSize ) = 0;
+};
+
+struct __declspec(uuid("94873e03-77df-455f-bc1c-e83b5ab8cf0f"))
+IWSDLPort : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=Getname))
+    _bstr_t name;
+    __declspec(property(get=Getaddress))
+    _bstr_t address;
+    __declspec(property(get=GetbindStyle))
+    _bstr_t bindStyle;
+    __declspec(property(get=Gettransport))
+    _bstr_t transport;
+    __declspec(property(get=Getdocumentation))
+    _bstr_t documentation;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t Getname ( );
+    _bstr_t Getaddress ( );
+    _bstr_t GetbindStyle ( );
+    _bstr_t Gettransport ( );
+    _bstr_t Getdocumentation ( );
+    HRESULT GetSoapOperations (
+        struct IEnumWSDLOperations * * ppIWSDLOperations );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_name (
+        /*[out,retval]*/ BSTR * pbstrPortName ) = 0;
+      virtual HRESULT __stdcall get_address (
+        /*[out,retval]*/ BSTR * pbstrPortAddress ) = 0;
+      virtual HRESULT __stdcall get_bindStyle (
+        /*[out,retval]*/ BSTR * pbstrbindStyle ) = 0;
+      virtual HRESULT __stdcall get_transport (
+        /*[out,retval]*/ BSTR * pbstrtransport ) = 0;
+      virtual HRESULT __stdcall get_documentation (
+        /*[out,retval]*/ BSTR * bstrDocumentation ) = 0;
+      virtual HRESULT __stdcall raw_GetSoapOperations (
+        /*[out]*/ struct IEnumWSDLOperations * * ppIWSDLOperations ) = 0;
+};
+
+struct __declspec(uuid("09bc1ff4-5711-4b93-b01d-ddd826ebd353"))
+ISoapConnector : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetInputStream))
+    IStreamPtr InputStream;
+    __declspec(property(get=GetOutputStream))
+    IStreamPtr OutputStream;
+    __declspec(property(get=GetProperty,put=PutProperty))
+    _variant_t Property[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IStreamPtr GetInputStream ( );
+    IStreamPtr GetOutputStream ( );
+    _variant_t GetProperty (
+        _bstr_t pPropertyName );
+    void PutProperty (
+        _bstr_t pPropertyName,
+        const _variant_t & pPropertyValue );
+    HRESULT ConnectWSDL (
+        struct IWSDLPort * pPort );
+    HRESULT reset ( );
+    HRESULT BeginMessageWSDL (
+        struct IWSDLOperation * pOperation );
+    HRESULT EndMessage ( );
+    HRESULT Connect ( );
+    HRESULT BeginMessage ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_InputStream (
+        /*[out,retval]*/ struct IStream * * pVal ) = 0;
+      virtual HRESULT __stdcall get_OutputStream (
+        /*[out,retval]*/ struct IStream * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Property (
+        /*[in]*/ BSTR pPropertyName,
+        /*[out,retval]*/ VARIANT * pPropertyValue ) = 0;
+      virtual HRESULT __stdcall put_Property (
+        /*[in]*/ BSTR pPropertyName,
+        /*[in]*/ VARIANT pPropertyValue ) = 0;
+      virtual HRESULT __stdcall raw_ConnectWSDL (
+        /*[in]*/ struct IWSDLPort * pPort ) = 0;
+      virtual HRESULT __stdcall raw_reset ( ) = 0;
+      virtual HRESULT __stdcall raw_BeginMessageWSDL (
+        /*[in]*/ struct IWSDLOperation * pOperation ) = 0;
+      virtual HRESULT __stdcall raw_EndMessage ( ) = 0;
+      virtual HRESULT __stdcall raw_Connect ( ) = 0;
+      virtual HRESULT __stdcall raw_BeginMessage ( ) = 0;
+};
+
+struct __declspec(uuid("8905303d-7ed3-40c2-a37f-27a46f98346a"))
+ISoapConnectorFactory : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    ISoapConnectorPtr CreatePortConnector (
+        struct IWSDLPort * pPort );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_CreatePortConnector (
+        /*[in]*/ struct IWSDLPort * pPort,
+        /*[out,retval]*/ struct ISoapConnector * * ppConnector ) = 0;
+};
+
+struct __declspec(uuid("a295eab4-73ac-4725-a7de-51047843b421"))
+SoapConnector;
+    // [ default ] interface ISoapConnector
+
+struct __declspec(uuid("4ce546ff-9128-465e-b5c5-5a36cfc2c285"))
+SoapConnectorFactory;
+    // [ default ] interface ISoapConnectorFactory
+
+struct __declspec(uuid("6205b8c9-75ff-4623-a50a-88e1f14eaff2"))
+HttpConnector;
+    // [ default ] interface ISoapConnector
+
+struct __declspec(uuid("fde424f3-aa10-471d-8a0a-6875c17b5914"))
+SoapReader;
+    // [ default ] interface ISoapReader
+
+struct __declspec(uuid("ade424f3-aa10-471d-8a0a-687534555900"))
+SoapSerializer;
+    // [ default ] interface ISoapSerializer
+
+struct __declspec(uuid("4bdfd94b-415c-46f2-95e1-d145ab080f9e"))
+ISOAPClient : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=Getfaultcode))
+    _bstr_t faultcode;
+    __declspec(property(get=Getfaultstring))
+    _bstr_t faultstring;
+    __declspec(property(get=Getfaultactor))
+    _bstr_t faultactor;
+    __declspec(property(get=Getdetail))
+    _bstr_t detail;
+    __declspec(property(get=GetClientProperty,put=PutClientProperty))
+    _variant_t ClientProperty[];
+    __declspec(property(put=PutRefHeaderHandler))
+    IDispatchPtr HeaderHandler;
+    __declspec(property(get=GetConnectorProperty,put=PutConnectorProperty))
+    _variant_t ConnectorProperty[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT mssoapinit (
+        _bstr_t bstrWSDLFile,
+        _bstr_t bstrServiceName,
+        _bstr_t bstrPort,
+        _bstr_t bstrWSMLFile );
+    _bstr_t Getfaultcode ( );
+    _bstr_t Getfaultstring ( );
+    _bstr_t Getfaultactor ( );
+    _bstr_t Getdetail ( );
+    _variant_t GetClientProperty (
+        _bstr_t PropertyName );
+    void PutRefHeaderHandler (
+        IDispatch * _arg1 );
+    void PutClientProperty (
+        _bstr_t PropertyName,
+        const _variant_t & pPropertyValue );
+    _variant_t GetConnectorProperty (
+        _bstr_t PropertyName );
+    void PutConnectorProperty (
+        _bstr_t PropertyName,
+        const _variant_t & pPropertyValue );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_mssoapinit (
+        /*[in]*/ BSTR bstrWSDLFile,
+        /*[in]*/ BSTR bstrServiceName,
+        /*[in]*/ BSTR bstrPort,
+        /*[in]*/ BSTR bstrWSMLFile ) = 0;
+      virtual HRESULT __stdcall get_faultcode (
+        /*[out,retval]*/ BSTR * bstrFaultcode ) = 0;
+      virtual HRESULT __stdcall get_faultstring (
+        /*[out,retval]*/ BSTR * bstrFaultstring ) = 0;
+      virtual HRESULT __stdcall get_faultactor (
+        /*[out,retval]*/ BSTR * bstrActor ) = 0;
+      virtual HRESULT __stdcall get_detail (
+        /*[out,retval]*/ BSTR * bstrDetail ) = 0;
+      virtual HRESULT __stdcall get_ClientProperty (
+        /*[in]*/ BSTR PropertyName,
+        /*[out,retval]*/ VARIANT * pPropertyValue ) = 0;
+      virtual HRESULT __stdcall putref_HeaderHandler (
+        /*[in]*/ IDispatch * _arg1 ) = 0;
+      virtual HRESULT __stdcall put_ClientProperty (
+        /*[in]*/ BSTR PropertyName,
+        /*[in]*/ VARIANT pPropertyValue ) = 0;
+      virtual HRESULT __stdcall get_ConnectorProperty (
+        /*[in]*/ BSTR PropertyName,
+        /*[out,retval]*/ VARIANT * pPropertyValue ) = 0;
+      virtual HRESULT __stdcall put_ConnectorProperty (
+        /*[in]*/ BSTR PropertyName,
+        /*[in]*/ VARIANT pPropertyValue ) = 0;
+};
+
+struct __declspec(uuid("e8685095-8543-4771-b2ee-e17c58379e47"))
+ISOAPServer : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Init (
+        _bstr_t pUrlWSDLFile,
+        _bstr_t bstrWSMLFileSpec );
+    HRESULT SoapInvoke (
+        const _variant_t & varInput,
+        IUnknown * pOutputStream,
+        _bstr_t bstrSoapAction );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Init (
+        /*[in]*/ BSTR pUrlWSDLFile,
+        /*[in]*/ BSTR bstrWSMLFileSpec ) = 0;
+      virtual HRESULT __stdcall raw_SoapInvoke (
+        /*[in]*/ VARIANT varInput,
+        /*[in]*/ IUnknown * pOutputStream,
+        /*[in]*/ BSTR bstrSoapAction ) = 0;
+};
+
+struct __declspec(uuid("ebb2ff12-861a-42b6-b815-b1af4d944916"))
+SoapServer;
+    // [ default ] interface ISOAPServer
+
+struct __declspec(uuid("86d54f3d-652d-4ab3-a1a6-14d403f6c813"))
+SoapClient;
+    // [ default ] interface ISOAPClient
+
+enum __MIDL___MIDL_itf_mssoap_0114_0002
+{
+    enXSDUndefined = -1,
+    enXSDDOM = 0,
+    enXSDstring = 1,
+    enXSDboolean = 2,
+    enXSDfloat = 3,
+    enXSDDouble = 4,
+    enXSDdecimal = 5,
+    enXSDtimeDuration = 6,
+    enXSDrecurringDuration = 7,
+    enXSDbinary = 8,
+    enXSDuriReference = 9,
+    enXSDid = 10,
+    enXSDidRef = 11,
+    enXSDentity = 12,
+    enXSDQName = 13,
+    enXSDcdata = 14,
+    enXSDtoken = 15,
+    enXSDlanguage = 16,
+    enXSDidRefs = 17,
+    enXSDentities = 18,
+    enXSDnmtoken = 19,
+    enXSDnmtokens = 20,
+    enXSDname = 21,
+    enXSDncname = 22,
+    enXSDnotation = 23,
+    enXSDinteger = 24,
+    enXSDnonpositiveInteger = 25,
+    enXSDlong = 26,
+    enXSDint = 27,
+    enXSDshort = 28,
+    enXSDbyte = 29,
+    enXSDnonNegativeInteger = 30,
+    enXSDnegativeInteger = 31,
+    enXSDunsignedLong = 32,
+    enXSDunsignedInt = 33,
+    enXSDunsignedShort = 34,
+    enXSDunsignedByte = 35,
+    enXSDpositiveInteger = 36,
+    enXSDtimeInstant = 37,
+    enXSDtime = 38,
+    enXSDtimePeriod = 39,
+    enXSDdate = 40,
+    enXSDmonth = 41,
+    enXSDyear = 42,
+    enXSDcentury = 43,
+    enXSDrecurringDate = 44,
+    enXSDrecurringDay = 45,
+    enXSDarray = 46,
+    enXSDanyType = 47,
+    enTKempty = 48,
+    enXSDEndOfBuildin = 49
+};
+
+struct __declspec(uuid("504d4b91-76b8-4d88-95ea-ceb5e0fe41f3"))
+IHeaderHandler : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL willWriteHeaders ( );
+    HRESULT writeHeaders (
+        struct ISoapSerializer * pSerializer,
+        IDispatch * pObject );
+    VARIANT_BOOL readHeader (
+        struct MSXML2::IXMLDOMNode * pHeaderNode,
+        IDispatch * pObject );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_willWriteHeaders (
+        /*[out,retval]*/ VARIANT_BOOL * pbWillWriteHeaders ) = 0;
+      virtual HRESULT __stdcall raw_writeHeaders (
+        /*[in]*/ struct ISoapSerializer * pSerializer,
+        /*[in]*/ IDispatch * pObject ) = 0;
+      virtual HRESULT __stdcall raw_readHeader (
+        /*[in]*/ struct MSXML2::IXMLDOMNode * pHeaderNode,
+        /*[in]*/ IDispatch * pObject,
+        /*[out,retval]*/ VARIANT_BOOL * pUnderstood ) = 0;
+};
+
+struct __declspec(uuid("6deae1c2-789f-430c-94cb-703f24e25d52"))
+IEnumWSDLPorts : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Next (
+        long celt,
+        struct IWSDLPort * * ppWSDLPort,
+        long * pulFetched );
+    HRESULT Skip (
+        long celt );
+    HRESULT reset ( );
+    HRESULT Clone (
+        struct IEnumWSDLPorts * * ppenum );
+    HRESULT Find (
+        _bstr_t bstrPortToFind,
+        struct IWSDLPort * * ppIWSDLPort );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Next (
+        long celt,
+        /*[out]*/ struct IWSDLPort * * ppWSDLPort,
+        long * pulFetched ) = 0;
+      virtual HRESULT __stdcall raw_Skip (
+        long celt ) = 0;
+      virtual HRESULT __stdcall raw_reset ( ) = 0;
+      virtual HRESULT __stdcall raw_Clone (
+        /*[out]*/ struct IEnumWSDLPorts * * ppenum ) = 0;
+      virtual HRESULT __stdcall raw_Find (
+        BSTR bstrPortToFind,
+        /*[out]*/ struct IWSDLPort * * ppIWSDLPort ) = 0;
+};
+
+struct __declspec(uuid("c21a73b1-5655-4b36-ba3f-8e2dbabe82df"))
+IWSDLService : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=Getname))
+    _bstr_t name;
+    __declspec(property(get=Getdocumentation))
+    _bstr_t documentation;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t Getname ( );
+    _bstr_t Getdocumentation ( );
+    HRESULT GetSoapPorts (
+        struct IEnumWSDLPorts * * ppIWSDLPorts );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_name (
+        /*[out,retval]*/ BSTR * bstrServiceName ) = 0;
+      virtual HRESULT __stdcall get_documentation (
+        /*[out,retval]*/ BSTR * bstrDocumentation ) = 0;
+      virtual HRESULT __stdcall raw_GetSoapPorts (
+        /*[out]*/ struct IEnumWSDLPorts * * ppIWSDLPorts ) = 0;
+};
+
+struct __declspec(uuid("bd5965b7-f5bf-49f3-ae7b-f817d4b7cc99"))
+IEnumWSDLService : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Next (
+        long celt,
+        struct IWSDLService * * ppWSDLService,
+        long * pulFetched );
+    HRESULT Skip (
+        long celt );
+    HRESULT reset ( );
+    HRESULT Clone (
+        struct IEnumWSDLService * * ppenum );
+    HRESULT Find (
+        _bstr_t bstrServiceToFind,
+        struct IWSDLService * * ppWSDLService );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Next (
+        long celt,
+        /*[out]*/ struct IWSDLService * * ppWSDLService,
+        long * pulFetched ) = 0;
+      virtual HRESULT __stdcall raw_Skip (
+        long celt ) = 0;
+      virtual HRESULT __stdcall raw_reset ( ) = 0;
+      virtual HRESULT __stdcall raw_Clone (
+        /*[out]*/ struct IEnumWSDLService * * ppenum ) = 0;
+      virtual HRESULT __stdcall raw_Find (
+        BSTR bstrServiceToFind,
+        /*[out]*/ struct IWSDLService * * ppWSDLService ) = 0;
+};
+
+struct __declspec(uuid("77127b0c-c47e-4861-8429-4b6da7401663"))
+IWSDLReader : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Load (
+        _bstr_t bstrWSDLFileSpec,
+        _bstr_t bstrWSMLFileSpec );
+    HRESULT GetSoapServices (
+        struct IEnumWSDLService * * ppWSDLServiceEnum );
+    HRESULT ParseRequest (
+        struct ISoapReader * pSoapReader,
+        struct IWSDLPort * * ppIWSDLPort,
+        struct IWSDLOperation * * ppIWSDLOperation );
+    HRESULT setProperty (
+        _bstr_t bstrPropertyName,
+        const _variant_t & varPropValue );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Load (
+        BSTR bstrWSDLFileSpec,
+        BSTR bstrWSMLFileSpec ) = 0;
+      virtual HRESULT __stdcall raw_GetSoapServices (
+        /*[out]*/ struct IEnumWSDLService * * ppWSDLServiceEnum ) = 0;
+      virtual HRESULT __stdcall raw_ParseRequest (
+        /*[in]*/ struct ISoapReader * pSoapReader,
+        /*[out]*/ struct IWSDLPort * * ppIWSDLPort,
+        /*[out]*/ struct IWSDLOperation * * ppIWSDLOperation ) = 0;
+      virtual HRESULT __stdcall raw_setProperty (
+        /*[in]*/ BSTR bstrPropertyName,
+        /*[in]*/ VARIANT varPropValue ) = 0;
+};
+
+struct __declspec(uuid("bb023fc5-aa10-47ce-8a0a-6875c17b5914"))
+WSDLReader;
+    // [ default ] interface IWSDLReader
+
+struct __declspec(uuid("9c5754f7-adf5-4d82-b181-0f8fc5ea882b"))
+SoapTypeMapperFactory;
+    // [ default ] interface ISoapTypeMapperFactory
+
+struct __declspec(uuid("86950840-d999-4902-b97a-1e80d2f31a51"))
+EnumWSDLService;
+    // [ default ] interface IEnumWSDLService
+
+struct __declspec(uuid("c75f59d9-672e-42e0-b353-134e1eb27eea"))
+WSDLService;
+    // [ default ] interface IWSDLService
+
+struct __declspec(uuid("d39cbff4-46af-459d-a8f7-61a38a1dc285"))
+EnumWSDLOperations;
+    // [ default ] interface IEnumWSDLOperations
+
+struct __declspec(uuid("61fc8c46-7102-4f1c-bfa0-30cd43aff1bb"))
+WSDLOperation;
+    // [ default ] interface IWSDLOperation
+
+struct __declspec(uuid("55429fce-044e-4adf-9322-2cfbff9b7b5d"))
+SoapMapper;
+    // [ default ] interface ISoapMapper
+
+struct __declspec(uuid("6b6b62b5-8f0a-46ad-aafa-11af2517ded1"))
+EnumSoapMappers;
+    // [ default ] interface IEnumSoapMappers
+
+struct __declspec(uuid("bd283625-5931-40ca-b43b-8e8a8651dc70"))
+EnumWSDLPorts;
+    // [ default ] interface IEnumWSDLPorts
+
+struct __declspec(uuid("dba51e33-5d87-47aa-af2f-2a616527808a"))
+WSDLPort;
+    // [ default ] interface IWSDLPort
+
+struct __declspec(uuid("edabbfa8-e126-402d-b65d-4efac1405f6e"))
+ISOAPError : IUnknown
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=Getfaultcode))
+    _bstr_t faultcode;
+    __declspec(property(get=Getfaultstring))
+    _bstr_t faultstring;
+    __declspec(property(get=Getfaultactor))
+    _bstr_t faultactor;
+    __declspec(property(get=Getdetail))
+    _bstr_t detail;
+    __declspec(property(get=GetfaultcodeNS))
+    _bstr_t faultcodeNS;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t Getfaultcode ( );
+    _bstr_t Getfaultstring ( );
+    _bstr_t Getfaultactor ( );
+    _bstr_t Getdetail ( );
+    _bstr_t GetfaultcodeNS ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_faultcode (
+        /*[out,retval]*/ BSTR * bstrFaultcode ) = 0;
+      virtual HRESULT __stdcall get_faultstring (
+        /*[out,retval]*/ BSTR * bstrFaultstring ) = 0;
+      virtual HRESULT __stdcall get_faultactor (
+        /*[out,retval]*/ BSTR * bstrActor ) = 0;
+      virtual HRESULT __stdcall get_detail (
+        /*[out,retval]*/ BSTR * bstrDetail ) = 0;
+      virtual HRESULT __stdcall get_faultcodeNS (
+        /*[out,retval]*/ BSTR * bstrNamespace ) = 0;
+};
+
+struct __declspec(uuid("b818238a-b709-4eb2-a4ce-6ba02c671f74"))
+ISoapTypeMapperFactory : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT addSchema (
+        struct MSXML2::IXMLDOMNode * pSchemaNode );
+    ISoapTypeMapperPtr getElementMapperbyName (
+        _bstr_t bstrElementName,
+        _bstr_t bstrElementNamespace );
+    ISoapTypeMapperPtr getTypeMapperbyName (
+        _bstr_t bstrTypeName,
+        _bstr_t bstrTypeNamespace );
+    ISoapTypeMapperPtr getElementMapper (
+        struct MSXML2::IXMLDOMNode * pElementNode );
+    ISoapTypeMapperPtr getTypeMapper (
+        struct MSXML2::IXMLDOMNode * pTypeNode );
+    HRESULT addType (
+        _bstr_t bstrTypeName,
+        _bstr_t bstrTypeNamespace,
+        _bstr_t bstrProgID );
+    HRESULT addElement (
+        _bstr_t bstrElementName,
+        _bstr_t bstrElementNamespace,
+        _bstr_t bstrProgID );
+    ISoapTypeMapperPtr getMapper (
+        enXSDType xsdType,
+        struct MSXML2::IXMLDOMNode * pSchemaNode );
+    HRESULT addTypeObjectMapper (
+        _bstr_t bstrTypeName,
+        _bstr_t bstrTypeNamespace,
+        _bstr_t bstrProgID,
+        _bstr_t bstrIID );
+    HRESULT addElementObjectMapper (
+        _bstr_t bstrElementName,
+        _bstr_t bstrElementNamespace,
+        _bstr_t bstrProgID,
+        _bstr_t bstrIID );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_addSchema (
+        /*[in]*/ struct MSXML2::IXMLDOMNode * pSchemaNode ) = 0;
+      virtual HRESULT __stdcall raw_getElementMapperbyName (
+        /*[in]*/ BSTR bstrElementName,
+        /*[in]*/ BSTR bstrElementNamespace,
+        /*[out,retval]*/ struct ISoapTypeMapper * * ppSoapTypeMapper ) = 0;
+      virtual HRESULT __stdcall raw_getTypeMapperbyName (
+        /*[in]*/ BSTR bstrTypeName,
+        /*[in]*/ BSTR bstrTypeNamespace,
+        /*[out,retval]*/ struct ISoapTypeMapper * * ppSoapTypeMapper ) = 0;
+      virtual HRESULT __stdcall raw_getElementMapper (
+        /*[in]*/ struct MSXML2::IXMLDOMNode * pElementNode,
+        /*[out,retval]*/ struct ISoapTypeMapper * * ppSoapTypeMapper ) = 0;
+      virtual HRESULT __stdcall raw_getTypeMapper (
+        /*[in]*/ struct MSXML2::IXMLDOMNode * pTypeNode,
+        /*[out,retval]*/ struct ISoapTypeMapper * * ppSoapTypeMapper ) = 0;
+      virtual HRESULT __stdcall raw_addType (
+        /*[in]*/ BSTR bstrTypeName,
+        /*[in]*/ BSTR bstrTypeNamespace,
+        /*[in]*/ BSTR bstrProgID ) = 0;
+      virtual HRESULT __stdcall raw_addElement (
+        /*[in]*/ BSTR bstrElementName,
+        /*[in]*/ BSTR bstrElementNamespace,
+        /*[in]*/ BSTR bstrProgID ) = 0;
+      virtual HRESULT __stdcall raw_getMapper (
+        /*[in]*/ enXSDType xsdType,
+        /*[in]*/ struct MSXML2::IXMLDOMNode * pSchemaNode,
+        /*[out,retval]*/ struct ISoapTypeMapper * * ppSoapTypeMapper ) = 0;
+      virtual HRESULT __stdcall raw_addTypeObjectMapper (
+        /*[in]*/ BSTR bstrTypeName,
+        /*[in]*/ BSTR bstrTypeNamespace,
+        /*[in]*/ BSTR bstrProgID,
+        /*[in]*/ BSTR bstrIID ) = 0;
+      virtual HRESULT __stdcall raw_addElementObjectMapper (
+        /*[in]*/ BSTR bstrElementName,
+        /*[in]*/ BSTR bstrElementNamespace,
+        /*[in]*/ BSTR bstrProgID,
+        /*[in]*/ BSTR bstrIID ) = 0;
+};
+
+struct __declspec(uuid("cea11d8a-258d-4863-a91f-3b4d046039e2"))
+ISoapTypeMapper : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Init (
+        struct ISoapTypeMapperFactory * pFactory,
+        struct MSXML2::IXMLDOMNode * pSchema,
+        enXSDType xsdType );
+    _variant_t read (
+        struct MSXML2::IXMLDOMNode * pNode,
+        _bstr_t bstrEncoding,
+        enEncodingStyle encodingMode,
+        long lFlags );
+    HRESULT write (
+        struct ISoapSerializer * pSoapSerializer,
+        _bstr_t bstrEncoding,
+        enEncodingStyle encodingMode,
+        long lFlags,
+        VARIANT * pvar );
+    long varType ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Init (
+        /*[in]*/ struct ISoapTypeMapperFactory * pFactory,
+        /*[in]*/ struct MSXML2::IXMLDOMNode * pSchema,
+        /*[in]*/ enXSDType xsdType ) = 0;
+      virtual HRESULT __stdcall raw_read (
+        /*[in]*/ struct MSXML2::IXMLDOMNode * pNode,
+        /*[in]*/ BSTR bstrEncoding,
+        /*[in]*/ enEncodingStyle encodingMode,
+        /*[in]*/ long lFlags,
+        /*[out,retval]*/ VARIANT * pvar ) = 0;
+      virtual HRESULT __stdcall raw_write (
+        /*[in]*/ struct ISoapSerializer * pSoapSerializer,
+        /*[in]*/ BSTR bstrEncoding,
+        /*[in]*/ enEncodingStyle encodingMode,
+        /*[in]*/ long lFlags,
+        /*[in]*/ VARIANT * pvar ) = 0;
+      virtual HRESULT __stdcall raw_varType (
+        /*[out,retval]*/ long * pvtType ) = 0;
+};
+
+struct __declspec(uuid("0571ce21-57ee-43d9-9ec7-36d7b4af5034"))
+ISoapTypeMapper2 : ISoapTypeMapper
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t iid ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_iid (
+        /*[out,retval]*/ BSTR * bstrIIDAsString ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "d:\sundari\giscad2016_source _from_anuj\external\modules\ellipseconnector\release\mssoap1.tli"
+
+} // namespace MSSOAPLib
+
+#pragma pack(pop)
