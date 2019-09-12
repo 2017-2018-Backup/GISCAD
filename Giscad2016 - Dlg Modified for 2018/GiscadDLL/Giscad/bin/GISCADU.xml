@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+GISCADU
+</name>
+</assembly>
+<members>
+<member name="M:GISCADU.frmGISErrors.#ctor">
+	<summary>
+ Populate Error symbol data in the dialog box if the Error block tag(Err_type) value = 1 
+ Err_Type value has been configured as ErrorFlag in settings.ini file as P1, P2, P3, P4
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>
